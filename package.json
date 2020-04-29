@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "author": "Kirill Kushpel",
   "dependencies": {
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-react-hooks": "^3.0.0",
     "axios": "^0.18.1",
     "moment": "^2.23.0",
     "react": "^16.10.1",
