@@ -7,159 +7,86 @@ import moment from 'moment';
 import _getRandomId from "../../utils/get-randomId";
 import './MessageList.css';
 
-const MY_USER_ID = 'apple';
+const MY_USER_ID = 'сталин';
 
 export default function MessageList(props) {
     const [messages, setMessages] = useState([])
-    const {id} = props
+    const {conversationsId, clickHandler} = props
 
+    // console.log(conversationsId, sortedConversations)
 
     useEffect(() => {
         getMessages();
     }, [])
 
-
     const getMessages = () => {
         const tempMessages = [
-            {chatId: id},
             {
                 id: 1,
-                author: 'apple',
+                author: 'сталин',
                 message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
                 messageId: _getRandomId(),
                 timestamp: new Date().getTime()
             },
             {
                 id: 2,
-                author: 'orange',
-                message: 'оу, вроде работает, но ты черкани еще пару строк',
+                author: 'троцкий',
+                message: 'это первый чат',
                 messageId: _getRandomId(),
                 timestamp: new Date().getTime()
             },
             {
                 id: 3,
-                author: 'orange',
+                author: 'троцкий',
                 message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
                 timestamp: new Date().getTime(),
                 messageId: _getRandomId(),
             },
             {
                 id: 4,
-                author: 'apple',
-                message: 'оу, вроде работает, но ты черкани еще пару строк',
+                author: 'сталин',
+                message: 'оу, вроде работает, но ты черкани еще пару строк в этот первый чат',
                 messageId: _getRandomId(),
                 timestamp: new Date().getTime()
             },
             {
                 id: 5,
-                author: 'apple',
+                author: 'сталин',
                 message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
                 messageId: _getRandomId(),
                 timestamp: new Date().getTime()
             },
             {
                 id: 6,
-                author: 'apple',
+                author: 'сталин',
                 message: 'оу, вроде работает, но ты черкани еще пару строк',
                 messageId: _getRandomId(),
                 timestamp: new Date().getTime()
             },
             {
                 id: 7,
-                author: 'orange',
+                author: 'троцкий',
                 message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
                 messageId: _getRandomId(),
                 timestamp: new Date().getTime()
             },
             {
                 id: 8,
-                author: 'orange',
+                author: 'троцкий',
                 message: 'оу, вроде работает, но ты черкани еще пару строк',
                 messageId: _getRandomId(),
                 timestamp: new Date().getTime()
             },
             {
                 id: 9,
-                author: 'apple',
+                author: 'сталин',
                 message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
                 messageId: _getRandomId(),
                 timestamp: new Date().getTime()
             },
             {
                 id: 10,
-                author: 'orange',
-                message: 'оу, вроде работает, но ты черкани еще пару строк',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-        ];
-        const tempMessages2 = [
-            {
-                id: 1,
-                author: 'apple',
-                message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 2,
-                author: 'orange',
-                message: 'оу, вроде работает, но ты черкани еще пару строк',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 3,
-                author: 'orange',
-                message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 4,
-                author: 'apple',
-                message: 'оу, вроде работает, но ты черкани еще пару строк',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 5,
-                author: 'apple',
-                message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 6,
-                author: 'apple',
-                message: 'оу, вроде работает, но ты черкани еще пару строк',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 7,
-                author: 'orange',
-                message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 8,
-                author: 'orange',
-                message: 'оу, вроде работает, но ты черкани еще пару строк',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 9,
-                author: 'apple',
-                message: 'это супер-пупер длинное предложение, оно должно аккуратно перенестись и поместиться в пузырь =)',
-                messageId: _getRandomId(),
-                timestamp: new Date().getTime()
-            },
-            {
-                id: 10,
-                author: 'orange',
+                author: 'троцкий',
                 message: 'оу, вроде работает, но ты черкани еще пару строк',
                 messageId: _getRandomId(),
                 timestamp: new Date().getTime()
@@ -168,6 +95,8 @@ export default function MessageList(props) {
 
         setMessages([...messages, ...tempMessages])
     }
+
+    // Работаем с сообщениями, сортируем их в группах по времени получения\отправки
 
     const renderMessages = () => {
         let i = 0;
@@ -179,15 +108,13 @@ export default function MessageList(props) {
             let current = messages[i];
             let next = messages[i + 1];
             let isMine = current.author === MY_USER_ID;
+            let messageId = current.messageId
             let currentMoment = moment(current.timestamp);
             let prevBySameAuthor = false;
             let nextBySameAuthor = false;
             let startsSequence = true;
             let endsSequence = true;
             let showTimestamp = true;
-
-            // Работаем с сообщениями, сортируем их в группах по времени получения\отправки
-
 
             if (previous) {
                 let previousMoment = moment(previous.timestamp);
@@ -199,7 +126,7 @@ export default function MessageList(props) {
                 }
 
                 if (previousDuration.as('hours') < 1) {
-                    showTimestamp = true;
+                    showTimestamp = false;
                 }
             }
 
@@ -217,6 +144,7 @@ export default function MessageList(props) {
                 <Message
                     key={i}
                     isMine={isMine}
+                    messageId={messageId}
                     startsSequence={startsSequence}
                     endsSequence={endsSequence}
                     showTimestamp={showTimestamp}
@@ -224,7 +152,7 @@ export default function MessageList(props) {
                 />
             );
 
-            // Перейти к следующему сообщению в списке
+            // Переход к следующему сообщению в списке
             i += 1;
         }
 
@@ -242,7 +170,7 @@ export default function MessageList(props) {
                 ]}
             />
 
-            <div className="message-list-container" id={id}>{renderMessages()} {props.children}</div>
+            <div className="message-list-container">{renderMessages()}</div>
 
             <Compose rightItems={[
                 <ToolbarButton key="photo" icon="ion-ios-camera"/>,

@@ -2,7 +2,10 @@
   "name": "messenger",
   "version": "0.1.0",
   "author": "Kirill Kushpel",
+  "homepage": "https://kirillkushpel.github.io/react-messenger/",
   "dependencies": {
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-react-hooks": "^3.0.0",
     "axios": "^0.18.1",
     "moment": "^2.23.0",
     "react": "^16.10.1",
@@ -13,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -25,6 +29,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "shave": "^2.5.4"
   }
 }
