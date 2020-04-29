@@ -11,7 +11,7 @@ const MY_USER_ID = 'сталин';
 
 export default function MessageList(props) {
     const [messages, setMessages] = useState([])
-    const {conversationsId} = props
+    const {conversationsId, clickHandler} = props
 
     // console.log(conversationsId, sortedConversations)
 

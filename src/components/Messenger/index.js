@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import ConversationList from '../ConversationList';
 import MessageList from '../MessageList';
 import './Messenger.css';
@@ -29,6 +29,10 @@ export default function Messenger(props) {
     }
 
     const conversationsId = sortedConversations.map(item => item.id);
+
+    const clickHandler = () => {
+        console.log('click')
+    }
 
     return (
         <div className="messenger">
